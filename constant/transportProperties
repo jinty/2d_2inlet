@@ -1,0 +1,46 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+/* Physical constants required for the icoFoam solver.
+
+This sover is for incompressible newtonian fluids in laminar flow only. Under
+these conditions the navier-stokes equation can be extremly simplified and
+viscosity combined with density.
+
+This is called the kinematic viscosity (nu).
+
+Where nu = viscosity/density
+
+its units are m^2/s.
+
+For now we just estimate: Argon: 
+
+	Density at (0 °C, 101.325 kPa) 1.784 kg/m^3
+
+Viscosity:
+
+	Viscosity (1.013 bar and 0 °C (32 °F)) : 0.0000209 Pa.s [1]
+
+VERY rough estimate of argon kinematic viscosity: 0.0000209 kg.m^-1.s^-1 / 1.784 kg/m^3 = 0.0000117 m^2/s
+
+[1] http://encyclopedia.airliquide.com/Encyclopedia.asp?LanguageID=11&CountryID=19&Formula=&GasID=3&UNNumber=&EquivGasID=3&PressionBox=&VolLiquideBox=&MasseLiquideBox=&VolGasBox=&MasseGasBox=&RD20=29&RD9=8&RD6=64&RD4=2&RD3=22&RD8=27&RD2=20&RD18=41&RD7=17&RD13=71&RD16=35&RD12=31&RD19=34&RD24=62&RD25=77&RD26=78&RD28=81&RD29=82&btnSubmitUnit=Click+to+change+the+values
+
+*/
+
+nu              nu [ 0 2 -1 0 0 0 0 ] 0.0000117;
+
+
+// ************************************************************************* //
