@@ -1,0 +1,8 @@
+/constant/polyMesh/boundary
+/constant/polyMesh/cellZones
+/constant/polyMesh/faceZones
+/constant/polyMesh/faces
+/constant/polyMesh/neighbour
+/constant/polyMesh/owner
+/constant/polyMesh/pointZones
+/constant/polyMesh/points
